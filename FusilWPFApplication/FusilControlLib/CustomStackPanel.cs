@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows.Controls;
+
+namespace FusilControlLib
+{
+    public class CustomStackPanel : StackPanel
+    {
+        public CustomStackPanel()
+        {
+            Height = 40;
+            //Height = 100;
+            Width = 300;
+        }
+    }
+}

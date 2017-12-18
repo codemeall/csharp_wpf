@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="FusilWPFApplication.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cf="clr-namespace:FusilControlLib;assembly=FusilControlLib"
+        Height="520" Width="620" >
+    <cf:CustomGrid x:Name="gdLogin">
+        <cf:CustomWrapPanel x:Name="wpLogin" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <cf:CustomStackPanel x:Name="spUserName" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="270" >
+               <cf:CustomLabel x:Name="lblUserName" Content="User Name" />
+                <cf:CustomTextBox x:Name="tbUserName" />
+            </cf:CustomStackPanel>
+            <cf:CustomStackPanel x:Name="spPassword" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="270" >
+                <cf:CustomLabel x:Name="lblPassword" Content="Password" />
+                <PasswordBox x:Name="Password" Width="150" Height="25"/>
+            </cf:CustomStackPanel>
+            <cf:CustomStackPanel x:Name="spButtons" Width="270" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <cf:CustomButtons x:Name="btnLogin" Content="Login" Margin="50,0,0,0" Click="btnLogin_Click" />
+                <cf:CustomButtons x:Name="btnClear" Content="Clear" Margin="30,0,0,0" Click="btnClear_Click" />
+            </cf:CustomStackPanel>
+        </cf:CustomWrapPanel>        
+    </cf:CustomGrid>
+</UserControl>

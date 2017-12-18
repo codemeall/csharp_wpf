@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="FusilWPFApplication.RegUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cf="clr-namespace:FusilControlLib;assembly=FusilControlLib"
+             mc:Ignorable="d" 
+             >
+    <cf:CustomGrid x:Name="gdRegistration">
+        <cf:CustomGroupBox x:Name="gbRegistration" Header="Registration Form" VerticalAlignment="Top" Width="500">
+            <cf:CustomWrapPanel x:Name="wpRegistration" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" >
+                <cf:CustomStackPanel x:Name="spUserId" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="40" Margin="0,30,0,0" >
+                    <cf:CustomLabel x:Name="lblUserId" Content="User Id*" Margin="80,0,0,0" />
+                    <cf:CustomTextBox x:Name="tbUserId" Text="{Binding UserId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </cf:CustomStackPanel>
+                <cf:CustomStackPanel x:Name="spFirstName" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="40"  >
+                    <cf:CustomLabel x:Name="lblFirstName" Content="First Name*" Margin="80,0,0,0" />
+                    <cf:CustomTextBox x:Name="tbFirstName" Text="{Binding FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </cf:CustomStackPanel>
+                <cf:CustomStackPanel x:Name="spLastName" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="40"  >
+                    <cf:CustomLabel x:Name="lblLastName" Content="Last Name" Margin="80,0,0,0" />
+                    <cf:CustomTextBox x:Name="tbLastName" Text="{Binding LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </cf:CustomStackPanel>
+                <cf:CustomStackPanel x:Name="spFatherName" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="40"  >
+                    <cf:CustomLabel x:Name="lblFatherName" Content="Father Name" Margin="80,0,0,0" />
+                    <cf:CustomTextBox x:Name="tbFatherName" Text="{Binding FatherName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </cf:CustomStackPanel>
+                <cf:CustomStackPanel x:Name="spDob" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="40"  >
+                    <cf:CustomLabel x:Name="lblDob" Content="DOB" Margin="80,0,0,0" />
+                    <DatePicker Height="25" Name="datePicker1" Width="115" SelectedDate="{Binding Dob, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </cf:CustomStackPanel>
+                <cf:CustomStackPanel x:Name="spMobileNo" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="40"  >
+                    <cf:CustomLabel x:Name="lblMobileNo" Content="MobileNo" Margin="80,0,0,0" />
+                    <cf:CustomTextBox x:Name="MobileNo" Text="{Binding MobileNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </cf:CustomStackPanel>
+                <cf:CustomStackPanel x:Name="spEmail" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="40"  >
+                    <cf:CustomLabel x:Name="lblEmail" Content="Email" Margin="80,0,0,0" />
+                    <cf:CustomTextBox x:Name="Email" Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </cf:CustomStackPanel>
+                <cf:CustomStackPanel x:Name="spAddress" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="40"  >
+                    <cf:CustomLabel x:Name="lblAddress" Content="Address" Margin="80,0,0,0" />
+                    <cf:CustomTextBox x:Name="Address" Text="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </cf:CustomStackPanel>                
+            </cf:CustomWrapPanel>
+        </cf:CustomGroupBox>
+
+    </cf:CustomGrid>
+</UserControl>

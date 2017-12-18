@@ -1,0 +1,4 @@
+E:\AzizSampleProjects\FusilWPFApplication\FusilDataConnectionLib\bin\Debug\FusilDataConnectionLib.dll
+E:\AzizSampleProjects\FusilWPFApplication\FusilDataConnectionLib\bin\Debug\FusilDataConnectionLib.pdb
+E:\AzizSampleProjects\FusilWPFApplication\FusilDataConnectionLib\obj\Debug\FusilDataConnectionLib.dll
+E:\AzizSampleProjects\FusilWPFApplication\FusilDataConnectionLib\obj\Debug\FusilDataConnectionLib.pdb

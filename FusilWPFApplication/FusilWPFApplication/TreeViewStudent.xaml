@@ -1,0 +1,38 @@
+﻿<Window x:Class="FusilWPFApplication.TreeViewStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cf="clr-namespace:FusilControlLib;assembly=FusilControlLib"
+        Title="TreeViewStudent" Width="450" Height="300" WindowStartupLocation="CenterScreen" >
+    <cf:CustomGrid x:Name="gdTree" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <cf:CustomWrapPanel x:Name="wpColumn1" Width="100" HorizontalAlignment="Center" Orientation="Vertical" >
+                <TreeView x:Name="treeControl" Width="100" Height="200" SelectedItemChanged="treeControl_SelectedItemChanged" >
+                    
+                </TreeView>
+            </cf:CustomWrapPanel>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <cf:CustomStackPanel x:Name="spButtons" Orientation="Horizontal" >
+                    <cf:CustomButtons x:Name="btnSave" Content="Save" Margin="20,0,0,0" Click="btnSave_Click" />
+                    <cf:CustomButtons x:Name="btnClear" Content="Clear" Margin="10,0,0,0" Click="btnClear_Click"/>
+                    <cf:CustomButtons x:Name="btnGroup" Content="Group" Margin="10,0,0,0" Click="btnGroup_Click" />
+                    <cf:CustomButtons x:Name="btnMaster" Content="Master" Margin="10,0,0,0" Click="btnMaster_Click"/>
+                </cf:CustomStackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <cf:CustomGrid x:Name="gdChild" >
+                    
+                </cf:CustomGrid>
+            </Grid>
+        </Grid>
+    </cf:CustomGrid>
+</Window>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="FusilWPFApplication.RegReportUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cf="clr-namespace:FusilControlLib;assembly=FusilControlLib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <cf:CustomGrid x:Name="gdRegReport" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" >
+            <cf:CustomTextBox x:Name="tbFilter" Margin="5,0,0,0" Text="{Binding Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        </Grid>
+        <Grid Grid.Row="1" >
+        <cf:CustomWrapPanel x:Name="wpRegReport" >
+            <cf:CustomDataGrid x:Name="dgRegReport" CanUserAddRows="False" AutoGenerateColumns="False" SelectionUnit="Cell" Width="500">
+                <DataGrid.Columns >
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnUserId" Header="User Id" Binding="{Binding UserId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnFirstName" Header="First Name" Binding="{Binding FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnLastName" Header="LastName" Binding="{Binding LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnFatherName" Header="Father Name" Binding="{Binding FatherName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnDob" Header="Dob" Binding="{Binding Dob, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnMobileNo" Header="Mobile No" Binding="{Binding MobileNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnEmail" Header="Email" Binding="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnAddress" Header="Address" Binding="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </DataGrid.Columns>
+            </cf:CustomDataGrid>
+        </cf:CustomWrapPanel>
+        </Grid>
+    </cf:CustomGrid>
+</UserControl>

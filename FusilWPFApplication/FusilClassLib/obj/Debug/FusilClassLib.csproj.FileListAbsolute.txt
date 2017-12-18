@@ -1,0 +1,7 @@
+E:\AzizSampleProjects\FusilWPFApplication\FusilClassLib\bin\Debug\FusilClassLib.dll
+E:\AzizSampleProjects\FusilWPFApplication\FusilClassLib\bin\Debug\FusilClassLib.pdb
+E:\AzizSampleProjects\FusilWPFApplication\FusilClassLib\bin\Debug\FusilDataConnectionLib.dll
+E:\AzizSampleProjects\FusilWPFApplication\FusilClassLib\bin\Debug\FusilDataConnectionLib.pdb
+E:\AzizSampleProjects\FusilWPFApplication\FusilClassLib\obj\Debug\FusilClassLib.csprojResolveAssemblyReference.cache
+E:\AzizSampleProjects\FusilWPFApplication\FusilClassLib\obj\Debug\FusilClassLib.dll
+E:\AzizSampleProjects\FusilWPFApplication\FusilClassLib\obj\Debug\FusilClassLib.pdb

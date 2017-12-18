@@ -1,0 +1,4 @@
+E:\AzizSampleProjects\FusilWPFApplication\FusilControlLib\bin\Debug\FusilControlLib.dll
+E:\AzizSampleProjects\FusilWPFApplication\FusilControlLib\bin\Debug\FusilControlLib.pdb
+E:\AzizSampleProjects\FusilWPFApplication\FusilControlLib\obj\Debug\FusilControlLib.dll
+E:\AzizSampleProjects\FusilWPFApplication\FusilControlLib\obj\Debug\FusilControlLib.pdb

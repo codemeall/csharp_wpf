@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="FusilWPFApplication.AccountsReportUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cf="clr-namespace:FusilControlLib;assembly=FusilControlLib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <cf:CustomGrid x:Name="gdAccountsReport">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" >
+            <cf:CustomTextBox x:Name="tbFilter" Margin="5,0,0,0" Text="{Binding Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        </Grid>
+        <Grid Grid.Row="1" >
+        <cf:CustomWrapPanel x:Name="wpAccountReport" >
+            <cf:CustomDataGrid x:Name="dgAccountsReport" CanUserAddRows="False" AutoGenerateColumns="False" SelectionUnit="Cell" Width="500">
+                <DataGrid.Columns >
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnSno" Header="Sno" Binding="{Binding Sno, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnName" Header="Name" Binding="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridComboBoxColumn x:Name="dgColumnTaxClass" Header="Tax Class*" Width="120" SelectedItemBinding="{Binding TaxClass, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnCode" Header="Code" Binding="{Binding Code, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnDesc" Header="Desc" Binding="{Binding Desc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnTaxRate" Header="Tax Rate" Binding="{Binding TaxRate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <cf:CustomDataGridTextColumns x:Name="dgColumnNarration" Header="Narration" Binding="{Binding Narration, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </DataGrid.Columns>
+            </cf:CustomDataGrid>
+        </cf:CustomWrapPanel>
+        </Grid>
+    </cf:CustomGrid>
+</UserControl>

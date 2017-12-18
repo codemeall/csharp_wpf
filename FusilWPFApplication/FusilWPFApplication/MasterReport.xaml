@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="FusilWPFApplication.MasterReport"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cf="clr-namespace:FusilControlLib;assembly=FusilControlLib"
+             mc:Ignorable="d" 
+             >
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="HeaderBrush" StartPoint="0,1" EndPoint="0,0" >
+            <GradientStop Color="SkyBlue" Offset="1" />
+            <GradientStop Color="AliceBlue" />
+        </LinearGradientBrush>
+    </UserControl.Resources>
+    <cf:CustomGrid x:Name="gdReport" >
+    <cf:CustomGrid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <cf:CustomWrapPanel x:Name="wpReport" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" >
+                <StackPanel x:Name="spButtons" Width="80">
+                    <cf:CustomButtons x:Name="btnAccounts" Content="Accounts" Margin="0,50,0,0" Click="btnAccounts_Click" />
+                    <cf:CustomButtons x:Name="btnReg" Content="Registration" Click="btnReg_Click" />
+                    <cf:CustomButtons x:Name="btnVehicle" Content="Vehicle" Click="btnVehicle_Click" />
+                </StackPanel>
+            </cf:CustomWrapPanel>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="60*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <cf:CustomStackPanel x:Name="spColumn2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Width="400" >
+                    <cf:CustomButtons x:Name="btnView" Content="View" Margin="5,0,0,0" Click="btnView_Click" />
+                    <cf:CustomButtons x:Name="btnClear" Content="Clear" Margin="5,0,0,0" Click="btnClear_Click" />
+                    <cf:CustomLabel x:Name="Report" Content="Reports Window" Height="40" Width="130" FontSize="15" Margin="10,0,0,0" />
+                    <cf:CustomButtons x:Name="btnHome" Content="Home" Margin="60,0,0,0" Click="btnHome_Click" />
+                </cf:CustomStackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <cf:CustomGrid x:Name="gdReportChild" >
+                    
+                </cf:CustomGrid>
+            </Grid>
+            </Grid>
+    </cf:CustomGrid>
+    </cf:CustomGrid>
+</UserControl>

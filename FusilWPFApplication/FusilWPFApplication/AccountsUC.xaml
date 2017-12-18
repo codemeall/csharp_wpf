@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="FusilWPFApplication.AccountsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"              
+             xmlns:cf="clr-namespace:FusilControlLib;assembly=FusilControlLib"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="HeaderBrush" StartPoint="0,1" EndPoint="0,1" >
+            <GradientStop Color="SkyBlue" Offset="1" />
+            <GradientStop Color="AliceBlue"/>
+        </LinearGradientBrush>
+    </UserControl.Resources>
+    <cf:CustomGrid x:Name="gdAccountsUC" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" >
+            <cf:CustomGroupBox x:Name="gbHeader" Header="Header" Width="500" VerticalAlignment="Top">
+                <cf:CustomWrapPanel x:Name="wpHeader" Orientation="Vertical"  VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <cf:CustomStackPanel x:Name="spSno" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="350" Height="40" Margin="0,5,0,0" >                        
+                        <cf:CustomLabel x:Name="lblSno" Content="Sno*" Margin="50,0,0,0" />
+                        <cf:CustomTextBox x:Name="tbSno" Text="{Binding Sno, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </cf:CustomStackPanel>
+                    <cf:CustomStackPanel x:Name="spName" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="350" Height="40" >
+                        <cf:CustomLabel x:Name="lblName" Content="Name*" Margin="50,0,0,0" />
+                        <cf:CustomTextBox x:Name="tbName" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </cf:CustomStackPanel>
+                    <cf:CustomStackPanel x:Name="spTaxClass" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="350" Height="40"  >
+                        <cf:CustomLabel x:Name="lblTaxClass" Content="Tax Class*" Margin="50,0,0,0" />
+                        <cf:CustomComboBox x:Name="comboTaxClass" SelectedItem="{Binding TaxClass, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </cf:CustomStackPanel>
+                    <cf:CustomStackPanel x:Name="spCode" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="350" Height="40"  >
+                        <cf:CustomLabel x:Name="lblCode" Content="Code" Margin="50,0,0,0" />
+                        <cf:CustomTextBox x:Name="tbCode" Text="{Binding Code, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </cf:CustomStackPanel>
+                    <cf:CustomStackPanel x:Name="spDesc" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="350" Height="40"  >
+                        <cf:CustomLabel x:Name="lblDesc" Content="Desc" Margin="50,0,0,0" />
+                        <cf:CustomTextBox x:Name="tbDesc" Text="{Binding Desc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </cf:CustomStackPanel>
+                </cf:CustomWrapPanel>
+            </cf:CustomGroupBox>
+        </Grid>
+        <Grid Grid.Row="1" >
+            <cf:CustomGrid x:Name="gdAccountsBodyUC" Background="{StaticResource HeaderBrush}">
+                <cf:CustomGroupBox x:Name="gbBody" Header="Body" VerticalAlignment="Top"  Width="500" Margin="0,0,0,0">
+                    <cf:CustomWrapPanel x:Name="wpBody" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" >
+                        <cf:CustomDataGrid x:Name="dgBody" Height="150" Width="500" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell">
+                            <DataGrid.RowHeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock x:Name="DataGridRno" Width="25" Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DataGridRow}}, Path=Header}" >
+                                <TextBlock.ContextMenu >
+                                    <ContextMenu x:Name="cmRowHeader" >
+                                        <MenuItem x:Name="miDelete" Header="Delete" />
+                                    </ContextMenu>
+                                </TextBlock.ContextMenu>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </DataGrid.RowHeaderTemplate>
+                            <DataGrid.Columns>
+                                <DataGridComboBoxColumn x:Name="dgColumnTaxClass" Header="Tax Class*" Width="150" SelectedItemBinding="{Binding TaxClass, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                <cf:CustomDataGridTextColumns x:Name="dgColumnTaxRate" Header="Tax Rate" Width="150" Binding="{Binding TaxRate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                <cf:CustomDataGridTextColumns x:Name="dgNarration" Header="Narration" Width="150" Binding="{Binding Narration, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            </DataGrid.Columns>
+                        </cf:CustomDataGrid>
+                    </cf:CustomWrapPanel>
+                </cf:CustomGroupBox>
+            </cf:CustomGrid>
+        </Grid>
+    </cf:CustomGrid>
+</UserControl>

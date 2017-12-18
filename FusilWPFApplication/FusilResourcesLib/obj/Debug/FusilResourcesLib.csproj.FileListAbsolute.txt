@@ -1,0 +1,11 @@
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\bin\Debug\FusilResourcesLib.dll
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\bin\Debug\FusilResourcesLib.pdb
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\obj\Debug\ButtonStyle.baml
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\obj\Debug\CustomStyle.baml
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\obj\Debug\GroupBoxStyle.baml
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\obj\Debug\TabandTabItemStyle.baml
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\obj\Debug\TextBoxStyle.baml
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\obj\Debug\FusilResourcesLib_MarkupCompile.cache
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\obj\Debug\FusilResourcesLib.g.resources
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\obj\Debug\FusilResourcesLib.dll
+E:\AzizSampleProjects\FusilWPFApplication\FusilResourcesLib\obj\Debug\FusilResourcesLib.pdb

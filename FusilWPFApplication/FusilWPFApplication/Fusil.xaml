@@ -1,0 +1,15 @@
+﻿<Window x:Class="FusilWPFApplication.Fusil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cf="clr-namespace:FusilControlLib;assembly=FusilControlLib"
+        Title="Fusil" Height="520" Width="620" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="HeaderBrush" StartPoint="1,0" EndPoint="1,1" >
+            <GradientStop Color="SkyBlue" Offset="1" />
+            <GradientStop Color="AliceBlue"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+    <cf:CustomGrid x:Name="gdFusil" Background="{StaticResource HeaderBrush}" >
+        
+    </cf:CustomGrid>
+</Window>
